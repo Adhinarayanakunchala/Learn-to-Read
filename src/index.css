@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  align-content: center;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border-bottom: 2px dotted #eee;
+  background-color: #eee;
+  padding: 10px;
+  margin: 0;
+}
+
+.logo img {
+  height: 50px;
+  width: 100px;
+}
+
+.header2 {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  padding: 10px;
+}
+
+.navmenu {
+  overflow: hidden;
+  background-color: white;
+}
+
+.menu-items {
+  float: left;
+  padding: 20px;
+  list-style: none;
+  text-decoration: none;
+  align-content: center;
+}
+
+.menu-items li {
+  float: left;
+  display: block;
+  width: 100px;
+  text-align: center;
+  margin-right: 0 10px;
+}
+
+.menu-items li a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a.active,
+a:hover {
+  background: #444;
+  color: white;
+}
+
+.menu-icon {
+  float: right;
+  align-content: center;
+  font-size: 30px;
+  display: none;
+  outline: none;
+}
+
+@media screen and (max-width: 858px) {
+  .logo {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.20rem;
+  }
+
+  .open {
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: dodgerblue;
+    padding: 10px;
+    margin: 0px;
+    align-items: center;
+    height: 300%;
+    width: 100%;
+  }
+
+  .open .menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-around;
+    margin: 20px auto; 
+  }
+
+  .menu-items,
+  li {
+    color: white;
+    padding: 10px;
+    gap:10px
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    border: none;
+    outline: none;
+  }
+}
+
+.slider-container {
+  max-width: 98vw;
+  padding: 20px;
+  margin: 0;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: white;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  /* object-fit: contain; */
+}
+
+.top-text1,
+.top-text2 {
+  background-color: #ddd;
+  /* Adjust margin for smaller screens */
+  width: 100%;
+  /* Use full width for smaller screens */
+  align-content: center;
+  height: 200px;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 100%;
+  column-gap: 20px;
+  row-gap: 20px;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 920px) {
+  .container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+
+.s1,
+.s2,
+.s3,
+.s4,
+.s5,
+.s6 {
+  background-color: #eee;
+  color: #333;
+  align-content: baseline;
+  border: 1px dotted double;
+  padding: 20px;
+  margin: 0px;
+}
+
+
+.text-bottom {
+  margin: 30px;
+  align-content: flex-start;
+  height: 33vh;
+  color: #333;
+  text-align: center;
+  padding: 15px;
+}
+
+.A {
+  text-decoration-color: darkred;
+  text-align: center;
+  scroll-padding-top: 10px;
+}
+
+.footer {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  background-color: dodgerblue;
+  text-align: center;
+  height: 50px;
+  align-content: center;
+}
+
+.footbar1 {
+  background-color: dodgerblue;
+  color: whitesmoke;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.footbar2 {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  text-decoration: dotted;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .header1,
+  .header2 {
+    display: block;
+    width: auto;
+    height: 60px;
+  }
+
+  .top-text1,
+  .top-text2,
+  .container,
+  .text-bottom {
+    margin :0px 0px;
+    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    grid-template-columns: auto;
+  }
+}
